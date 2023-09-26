@@ -2,7 +2,7 @@ document.querySelectorAll('.clickable-item').forEach(item => {
     item.addEventListener('click', handleClick); });/*asynchronous Event Handler which runs
      constantly and is triggered when a 'clickable item' is clicked*/
 
-//document.getElementById('searchInput').addEventListener('input', searchContent);
+document.getElementById('searchInput').addEventListener('input', searchContent);
 function handleClick(event){
 const clickedItemId = event.target.id;// find what the clicked item is
 const iframe = document.getElementById('myIframe'); //go find the iframe
@@ -24,43 +24,7 @@ function searchContent() {
       }
     });
 }
-document.addEventListener('DOMContentLoaded', () => {
-    //wait for content boot up
 
-    /* just some debugging stuff to try figure it out
-    const headers = document.querySelectorAll('.dropdown-header');
-    console.log('Headers:', headers);
-
-    headers.forEach((header, index) => {
-        console.log(`Header ${index}:`, header);
-        */
-
-        //JOE'S COMMENT/////////////////////
-        ////////////////////////////////////
-        // header is not defined. use get element 
-        // by Tag name if you really need to user
-        // header tag
-        // however, the code below is not used
-        ////////////////////////////////////
-        const header = document.getElementsByTagName("header")
-console.log(header)
-        header[1].addEventListener('click', () => {
-          console.log("hello");
-            const content = header.nextElementSibling;
-            /* Even more debugging
-            console.log('Header clicked:', header);
-            console.log('Toggling display for:', content);
-            */
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = 'block';
-            }
-        });
-});
-
-//JOE'S COMMENT/////////////////////
-////////////////////////////////////
 // this function below is added
 // this function is called with HTML
 ////////////////////////////////////
