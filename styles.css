@@ -1,0 +1,86 @@
+header {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  line-height: 3.5%;
+  font-size: medium;
+  text-decoration-line: underline;
+  background-color: #d9d9d6; /* Replace with your desired color */
+  height: 7%;
+  width: 100%;
+  margin-top: 0px;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  border-bottom: 1px solid #2d2926;
+  z-index: 1000;
+}
+body {
+    font-family: Arial, sans-serif;
+  }
+table {
+    width: 20%;
+    position:fixed;
+    border-collapse: collapse;  /* This property combines the borders of adjacent cells */
+    top:15%
+  }
+th, td {
+    border: 1px solid black;  /* This property sets a border on the individual cells */
+    padding: 8px;
+    transition : background-color 0.3s ease;
+    text-align: center;
+}
+
+table td:hover {
+    background-color: #A30046;
+    color: #ffffff;
+}
+  
+  th {
+    background-color: #f4f4f4;
+  }
+
+  .top-right {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: 1100;
+}
+
+
+iframe {
+    position : fixed;
+    top : 15%;
+    right : 2.5%;
+    width: 75%;
+    height: 80%;
+   /* border-color: #2d2926;*/
+    border-width: 3px;
+  }
+
+  #searchForm {
+    display: flex;
+    position : fixed;
+    height: 4%;
+    top : 8%;
+    left : auto;
+    width: 98%;
+    max-width: 100%;
+    margin: auto;
+    padding: 5px;
+  }
+  
+  #searchInput {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  #searchForm button {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 0 4px 4px 0;
+    background-color: #f8f9fa;
+    cursor: pointer;
+  }
+  
