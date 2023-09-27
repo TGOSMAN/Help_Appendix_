@@ -3,30 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Basic HTML Webpage</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-    }
-    header, footer {
-        background-color: #f8f9fa;
-        padding: 10px;
-        text-align: center;
-    }
-    main {
-        padding: 20px;
-    }
-</style>
+<link rel="stylesheet" type="text/css" href="instruction_file_style.css">
+<title style="color: #A30046;">Home Page</title>
 </head>
 <body>
 <header>
-    <h1>Welcome to My Basic Webpage</h1>
+    <h1 class=title>Home Page</h1>
 </header>
 <main>
-    <p>This is a paragraph of text that describes the content of the webpage. You can put any text here to convey information to your website visitors.</p>
+    <div id="linkspage">
+        <table>
+            <tr>
+                <th id="Contents"; style="background-color: #2d2926; color:#FFFFFF; font-size: 20pt;">Contents</th>
+            </tr>
+            <tr><td><a href="#Purpose:"; class ="links1">Purpose</a></td></tr>
+            <tr>
+                <td><a href="#Website"; class="links1">UBuild Website</a></td>
+            </tr>
+            <tr>
+                <td><a href="#Tab Openings"; class="links2">Tab Openings</a></td>
+            </tr>
+        </table>
+    </div>
+    <h2 id="Purpose:">Purpose</h2>
+
+
+    <p> This help page is designed to simply show a different HTML page for each topic. If there are large pages with multiple tabs open you can use the contents links to drop down to the respective section. Additionally, using drop down tabs allows for compact initial display and a cleaner and more accessible interface <br>
+        USE THE SEARCH PAGE TO FILTER PAGE RESULTS
+    </p>
+
+    <!--
+
+        you want to paste the following code for each section of div you want to expand / collapse
+
+        <h2 id="Creating a Digital HAC" class="dropdown-header"> Creating a Digital HAC 
+            <button class = "toggle-button" onclick="toggleDropdown(this)"> 
+                <img src="arrow-down-sign-to-navigate.png";\ alt="logo"; id = "hello" width="20px" height="auto">
+            </button>
+        </h2>
+        <div>
+            CONTENT TO EXPAND / COLLAPSE
+        </div>
+
+        the function in script.js triggered by "onclick = 'toggleDropd-own(this)'"
+    -->
+
+    <h1 id="Website">UBuild Website </h1>
+        <h2 id="Tab Openings" class="dropdown-header"> Tab Openings
+            <button class = "toggle-button" onclick="toggleDropdown(this)"> 
+                <img src="arrow-down-sign-to-navigate.png";\ alt="logo"; id = "hello" width="20px" height="auto">
+            </button>
+        </h2>
+        <div style="display: none;">
+            <p>
+                <!--<img src="Stage1Desktop HAC.gif"; class = "top-right"; width=100%; height=auto> -->
+                <p class="steps">
+                    You can add a video/gif/picture above to assist in the instrucitons. All of this should collapse down at the click of the arrow tab
+                    1.<span class="instruction">Instruction 1</span><br>
+                    2.<span class="instruction">Instruction 2</span><br>
+                    3.<span class="instruction">Instruction 3 ...</span><br>
+                </p>
+                </p>
+        </div>
 </main>
 <footer>
-    <p>Footer Information</p>
+    <p>Designed for Ultegra by Thomas Gosman 27/09/2023</p>
 </footer>
+<script src="Script.js"></script>
 </body>
+</script>
+</body>
+
 </html>
+
