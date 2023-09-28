@@ -32,15 +32,16 @@ body {
     background-color: #ffffff;
   }
 table {
+    
     /*width: 20%;*/
     /* position:fixed;*/
     border-collapse: collapse;  /* This property combines the borders of adjacent cells */
     /*top:15%*/
+    overflow-x: auto;
   }
 th, td {
-    border: 3px solid black;  /* This property sets a border on the individual cells */
-    padding: 8px;
-    max-width: 15px;
+    /*border: 3px solid black; */ /* This property sets a border on the individual cells */
+    padding: 5px;
     background-color: white;
     transition : background-color 0.3s ease;
     text-align: center;
@@ -95,10 +96,13 @@ iframe {
   
 /* Flex container */
 .flex-container {
+  padding: 2px;
   grid-row: 2 / 3;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row-reverse;  /* Aligns children horizontally with space between them */
+  align-items: flex-start;
+  border: 2px solid black; 
 }
 
 /* Style for table */
@@ -122,8 +126,8 @@ iframe {
   display: grid;
   position: fixed;
   top: 10%;
-  min-width: 98%;
-  max-height: 100%;
+  min-width: 100vw;
+  max-height: 100vh;
   overflow-y: auto;
   grid-template-rows: auto auto;  /* Two rows: one for search form and one for flex container */
 }
