@@ -40,7 +40,7 @@ table {
 th, td {
     border: 3px solid black;  /* This property sets a border on the individual cells */
     padding: 8px;
-    height: 15px;
+    max-width: 15px;
     background-color: white;
     transition : background-color 0.3s ease;
     text-align: center;
@@ -76,13 +76,13 @@ iframe {
   #searchForm {
     grid-row: 1 / 2;
     display: flex;
-    position : fixed;
-    height: 4%;
-    top : 8%;
+    /*position : fixed;*/
+    height: 8%;
+    /*top : 8%;*/
     left : auto;
     width: 98%;
     max-width: 100%;
-    margin: auto;
+    /*margin-top: auto;*/
     padding: 5px;
   }
   
@@ -103,16 +103,27 @@ iframe {
 
 /* Style for table */
 .table-section {
-  flex: 0 0 20%;  /* Don't grow, don't shrink, stay at 20% width */
+  flex: 0 0 20%; 
+   /* Don't grow, don't shrink, stay at 20% width */
 }
-
+  .table-section tr {
+    height: 50px;
+    max-height: 50px;
+    min-height: 50px;
+  }
+  
 /* Style for iframe */
 .iframe-section {
   flex: 0 0 80%;  /* Don't grow, don't shrink, stay at 80% width */
-  height: 100vh;  /* Optional: Sets the height to 100% of the viewport height */
+  height: 99vh  /* Optional: Sets the height to 100% of the viewport height */
 }
 
 .wrapper {
   display: grid;
+  position: fixed;
+  top: 10%;
+  min-width: 98%;
+  max-height: 100%;
+  overflow-y: auto;
   grid-template-rows: auto auto;  /* Two rows: one for search form and one for flex container */
 }
