@@ -20,6 +20,9 @@ header {
   header {
     font-size: 3.5vw;
   }
+  th,td {
+    font-size: 8pt;
+  }
   /*table {
     width: 10%;
   }*/
@@ -37,7 +40,7 @@ table {
     /* position:fixed;*/
     border-collapse: collapse;  /* This property combines the borders of adjacent cells */
     /*top:15%*/
-    overflow-x: auto;
+    width:fit-content
   }
 th, td {
     /*border: 3px solid black; */ /* This property sets a border on the individual cells */
@@ -97,13 +100,15 @@ iframe {
   
 /* Flex container */
 .flex-container {
-  padding: 2px;
+  padding: 0.1%;
   grid-row: 2 / 3;
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;  /* Aligns children horizontally with space between them */
   align-items: flex-start;
   border: 2px solid black; 
+  max-width: 98vw;
+  left: 0%
 }
 
 /* Style for table */
@@ -126,7 +131,8 @@ iframe {
 .wrapper {
   display: grid;
   position: fixed;
-  top: 10%;
-  min-width: 100vw;
+  align-self: center;
+  top: 8.5%;
+  min-width: 99vw;
   grid-template-rows: auto auto;  /* Two rows: one for search form and one for flex container */
 }
