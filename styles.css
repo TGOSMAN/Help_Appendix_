@@ -15,16 +15,16 @@ header {
   vertical-align: baseline;
   z-index: 1000;
 }
-/*
+
 @media screen and (max-width: 480px) {
   header {
     font-size: 3.5vw;
   }
-  table {
+  /*table {
     width: 10%;
-  }
+  }*/
 }
-*/
+
 
 
 body {
@@ -77,14 +77,15 @@ iframe {
   #searchForm {
     grid-row: 1 / 2;
     display: flex;
+    align-self: top;
+    min-height: 95%;
     /*position : fixed;*/
-    height: 8%;
     /*top : 8%;*/
     left : auto;
     width: 98%;
     max-width: 100%;
     /*margin-top: auto;*/
-    padding: 5px;
+    padding: 1px;
   }
   
   #searchInput {
@@ -127,7 +128,5 @@ iframe {
   position: fixed;
   top: 10%;
   min-width: 100vw;
-  max-height: 100vh;
-  overflow-y: auto;
   grid-template-rows: auto auto;  /* Two rows: one for search form and one for flex container */
 }
