@@ -33,13 +33,14 @@ body {
   }
 table {
     /*width: 20%;*/
-    position:fixed;
+    /* position:fixed;*/
     border-collapse: collapse;  /* This property combines the borders of adjacent cells */
-    top:15%
+    /*top:15%*/
   }
 th, td {
     border: 3px solid black;  /* This property sets a border on the individual cells */
     padding: 8px;
+    height: 15px;
     background-color: white;
     transition : background-color 0.3s ease;
     text-align: center;
@@ -64,15 +65,16 @@ table td:hover {
 
 iframe {
     /*grid-column: 1 / 2;*/
-    position : fixed;
+    /*position : fixed;
     top : 15%;
-    right : 2.5%;
+    right : 2.5%;*/
     /*width: 75%;*/
     height: 80%;
     background-color: #ffffff;
   }
 
   #searchForm {
+    grid-row: 1 / 2;
     display: flex;
     position : fixed;
     height: 4%;
@@ -93,8 +95,10 @@ iframe {
   
 /* Flex container */
 .flex-container {
+  grid-row: 2 / 3;
   display: flex;
-  justify-content: space-between;  /* Aligns children horizontally with space between them */
+  justify-content: space-between;
+  flex-direction: row-reverse;  /* Aligns children horizontally with space between them */
 }
 
 /* Style for table */
@@ -106,4 +110,9 @@ iframe {
 .iframe-section {
   flex: 0 0 80%;  /* Don't grow, don't shrink, stay at 80% width */
   height: 100vh;  /* Optional: Sets the height to 100% of the viewport height */
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto auto;  /* Two rows: one for search form and one for flex container */
 }
