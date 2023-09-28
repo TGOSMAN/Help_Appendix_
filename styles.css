@@ -2,7 +2,7 @@ header {
   font-family: 'Arial', sans-serif;
   font-weight: bold;
   line-height: 3.5%;
-  font-size: x-large;
+  font-size: 7%;
   text-decoration-line: underline;
   background-color: #d9d9d6; /* Replace with your desired color */
   height: 7%;
@@ -15,9 +15,9 @@ header {
   vertical-align: baseline;
   z-index: 1000;
 }
-@media screen and (max-width: 480px) {  /* commonly used breakpoint for mobile devices */
+@media screen and (max-width: 414px) {  /* commonly used breakpoint for mobile devices */
   header {
-    font-size: 18px;  /* Adjust as needed */
+    font-size: 5%;  /* Adjust as needed */
   }
 }
 
