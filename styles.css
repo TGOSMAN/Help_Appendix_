@@ -115,7 +115,7 @@ iframe {
 
 /* Flex container */
 .flex-container {
-  padding: 0.1%;
+  padding: 0.30%;
   grid-row: 2 / 3;
   display: flex;
   justify-content: center;
