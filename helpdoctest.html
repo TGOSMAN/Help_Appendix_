@@ -4,28 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles.css">
-<title>UBuild Help Page</title>
+<title>Home Page</title>
 </head>
 <header style="background-color: #A30046;"> <h1 style="color: #FFFFFF">UBuild Help Page</h1>
    <img src="mobile-logo.png"; alt="logo"; class="top-right"; width=auto; height=5%>
 </header>
-<form id="searchForm">
-      <input type="text" id="searchInput" placeholder="Search..." />
-
-</form>
-<iframe src="Home_Page.html" width="600" height="800"; id="myIframe"></iframe>
-<table id="contentTable" style="border-color: #2D2926;">
-   <tr>
-      <th id="Contents">Contents</th>Page
-  </tr>
-  <tr>
-      <td id="Home_Page"; class="clickable-item">Home Page Guide</td>
-   </tr>
-   <tr>
-      <td id="Digital_HAC"; class="clickable-item">Digital HAC</td>
-   </tr>
-</table>
-<script src="Script.js"></script>
+<div class="wrapper">
+   <form id="searchForm">
+         <input type="text" id="searchInput" placeholder="Search..." />
+   </form>
+   <div class ="flex-container">
+      <iframe class="iframe-section" src="Home_Page.html" width=auto height=auto    ; id="myIframe"></iframe>
+      <table class="table-section" id="contentTable" style="border-color: #2D2926;">
+         <tr>
+            <th id="Contents">Contents</th>
+      </tr>
+      <tr>
+            <td id="Home_Page"; class="clickable-item">Home Page Guide</td>
+         </tr>
+         <tr>
+            <td id="Digital_HAC"; class="clickable-item">Digital HAC</td>
+         </tr>
+      </table>
+   </div>
+</div>
+<script src="script.js"></script>
 
 </body>
 </html>

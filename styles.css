@@ -3,7 +3,7 @@ header {
   font-weight: bold;
   line-height: 3.5%;
   font-size: x-large;
-  text-decoration-line: underline;
+  text-decoration-line: underline white;
   background-color: #d9d9d6; /* Replace with your desired color */
   height: 7%;
   width: 100%;
@@ -16,18 +16,36 @@ header {
   z-index: 1000;
 }
 
+@media screen and (max-width: 480px) {
+  header {
+    font-size: 3.5vw;
+  }
+  th,td {
+    font-size: 8pt;
+  }
+  /*table {
+    width: 10%;
+  }*/
+}
+
+
+
 body {
     font-family: Arial, sans-serif;
+    background-color: #ffffff;
   }
 table {
-    width: 20%;
-    position:fixed;
+    
+    /*width: 20%;*/
+    /* position:fixed;*/
     border-collapse: collapse;  /* This property combines the borders of adjacent cells */
-    top:15%
+    /*top:15%*/
+    width:fit-content
   }
 th, td {
-    border: 1px solid black;  /* This property sets a border on the individual cells */
-    padding: 8px;
+    /*border: 3px solid black; */ /* This property sets a border on the individual cells */
+    padding: 5px;
+    background-color: white;
     transition : background-color 0.3s ease;
     text-align: center;
 }
@@ -50,25 +68,27 @@ table td:hover {
 
 
 iframe {
-    position : fixed;
+    /*grid-column: 1 / 2;*/
+    /*position : fixed;
     top : 15%;
-    right : 2.5%;
-    width: 75%;
+    right : 2.5%;*/
+    /*width: 75%;*/
     height: 80%;
-   /* border-color: #2d2926;*/
-    border-width: 3px;
+    background-color: #ffffff;
   }
 
   #searchForm {
+    grid-row: 1 / 2;
     display: flex;
-    position : fixed;
-    height: 4%;
-    top : 8%;
+    align-self: top;
+    min-height: 95%;
+    /*position : fixed;*/
+    /*top : 8%;*/
     left : auto;
     width: 98%;
     max-width: 100%;
-    margin: auto;
-    padding: 5px;
+    /*margin-top: auto;*/
+    padding: 1px;
   }
   
   #searchInput {
@@ -78,3 +98,41 @@ iframe {
     border-radius: 4px 0 0 4px;
   }
   
+/* Flex container */
+.flex-container {
+  padding: 0.1%;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;  /* Aligns children horizontally with space between them */
+  align-items: flex-start;
+  border: 2px solid black; 
+  max-width: 98vw;
+  left: 0%
+}
+
+/* Style for table */
+.table-section {
+  flex: 0 0 20%; 
+   /* Don't grow, don't shrink, stay at 20% width */
+}
+  .table-section tr {
+    height: 50px;
+    max-height: 50px;
+    min-height: 50px;
+  }
+  
+/* Style for iframe */
+.iframe-section {
+  flex: 0 0 80%;  /* Don't grow, don't shrink, stay at 80% width */
+  height: 99vh  /* Optional: Sets the height to 100% of the viewport height */
+}
+
+.wrapper {
+  display: grid;
+  position: fixed;
+  align-self: center;
+  top: 8.5%;
+  min-width: 99vw;
+  grid-template-rows: auto auto;  /* Two rows: one for search form and one for flex container */
+}
