@@ -85,8 +85,7 @@ iframe {
     /*position : fixed;*/
     /*top : 8%;*/
     left : auto;
-    width: 98%;
-    max-width: 100%;
+    width: 99%;
     padding: 1px;
   }
   
@@ -95,8 +94,25 @@ iframe {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px 0 0 4px;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right,  #A30046,white, white,  #A30046); /* Start and end with the same color */
+    background-position: 100% 0; /* Start at the same initial position as the animation */
+    animation: gradient-flow 4s linear infinite paused;
+  }
+
+  #searchInput:hover {
+    animation-play-state: running; 
   }
   
+  @keyframes gradient-flow {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: -100% 0;  /* Complete cycle from 100% to -100% */
+    }
+  }
+
 /* Flex container */
 .flex-container {
   padding: 0.1%;
